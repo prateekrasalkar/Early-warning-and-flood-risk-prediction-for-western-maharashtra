@@ -1,0 +1,195 @@
+.flood-prediction-page {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #eef7f3 0%, #d7e8f4 100%);
+    padding: clamp(12px, 3vw, 24px);
+}
+
+.flood-prediction-header {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.flood-prediction-title {
+    font-size: clamp(1.45rem, 4vw, 2rem);
+    margin: 0;
+    color: #143d2f;
+    line-height: 1.15;
+}
+
+.flood-prediction-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.secondary-button,
+.flood-prediction-button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    min-height: 44px;
+    max-width: 100%;
+}
+
+.secondary-button {
+    background-color: #204e5f;
+    color: #fff;
+}
+
+.ghost-button {
+    background-color: #f2f7fa;
+    color: #204e5f;
+    border: 1px solid #b8c8d4;
+}
+
+.flood-prediction-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 14px;
+    padding: clamp(16px, 3vw, 24px);
+    box-shadow: 0 20px 40px rgba(14, 54, 73, 0.12);
+}
+
+.flood-prediction-subtitle {
+    margin: 0 0 20px;
+    line-height: 1.6;
+    color: #314b57;
+}
+
+.helper-text {
+    margin: 0 0 16px;
+    color: #49616c;
+    font-weight: 600;
+}
+
+.flood-prediction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.date-field,
+.feature-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+    color: #173a47;
+    font-weight: 600;
+}
+
+.feature-field span {
+    overflow-wrap: anywhere;
+    display: block;
+    font-size: 0.92rem;
+}
+
+.field-hint {
+    color: #5f7680;
+    font-weight: 500;
+    line-height: 1.4;
+    font-size: 0.78rem;
+}
+
+.field-warning {
+    color: #9a3412;
+    font-weight: 600;
+    line-height: 1.4;
+    font-size: 0.78rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 16px;
+}
+
+.flood-prediction-input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid #b9c9d3;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background-color: #f9fcfd;
+}
+
+.flood-prediction-button {
+    background-color: #217346;
+    color: #fff;
+}
+
+.flood-prediction-button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.form-error {
+    margin-top: 16px;
+    color: #b42318;
+    font-weight: 600;
+}
+
+.flood-prediction-result {
+    margin-top: 24px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ebf7ef;
+    border: 1px solid #b4d8c0;
+    color: #183b2b;
+}
+
+.prediction-explanation {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #c7dfcf;
+}
+
+.prediction-explanation h3 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    color: #143d2f;
+}
+
+.prediction-explanation p {
+    margin: 8px 0;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+    .flood-prediction-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .flood-prediction-actions {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .secondary-button {
+        width: 100%;
+        padding-inline: 12px;
+    }
+}
+
+@media (max-width: 420px) {
+    .flood-prediction-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .flood-prediction-subtitle,
+    .helper-text,
+    .prediction-explanation p {
+        font-size: 0.92rem;
+    }
+}
